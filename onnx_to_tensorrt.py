@@ -9,7 +9,7 @@ if __name__ == '__main__':
     # 保存trt模型路径
     save_tensorrt_path = '/mnt/cluster/huangyangke/llm/text2vector/checkpoints/trt_model/text2vec_large_chinese'
     # 动态维度设置
-    flag_fp16 = False
+    flag_fp16 = False # 目前fp16输出的模型推理有问题，需要在导出onnx的时候就设置为fp16，关于如何导出fp16的onnx模型请参考chinese-clip项目
     min_batch_size = 1
     max_batch_size = 128
     min_seq_len = 1
